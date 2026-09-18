@@ -63,7 +63,6 @@ fun SuperheroesApp() {
             items(HeroesRepository.heroes) { hero ->
                 HeroListItem(
                     hero = hero,
-                    // La guía pide 16.dp de padding horizontal y 8.dp vertical entre elementos
                     modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
                 )
             }

@@ -1,6 +1,7 @@
 package com.example.postres30dias
 
 import android.os.Bundle
+import androidx.compose.animation.animateColorAsState
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateContentSize
@@ -83,21 +84,25 @@ fun PostresApp() {
 
 @Composable
 fun PostreCard(elemento: Elemento, modifier: Modifier = Modifier) {
-    // Estado para controlar si la tarjeta está expandida o no
     var expandido by remember { mutableStateOf(false) }
+
+    val colorAnimado by animateColorAsState(
+        targetValue = if (expandido) MaterialTheme.colorScheme.tertiaryContainer
+        else MaterialTheme.colorScheme.surface,
+        label = "colorAnimacion"
+    )
 
     Card(
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+        colors = CardDefaults.cardColors(containerColor = colorAnimado),
         modifier = modifier
             .fillMaxWidth()
-            // Hacemos que toda la tarjeta sea clickeable para expandirse
             .clickable { expandido = !expandido },
         shape = MaterialTheme.shapes.medium
     ) {
         Column(
             modifier = Modifier
                 .padding(16.dp)
-                // Aquí aplicamos la animación fluida al cambiar de tamaño
                 .animateContentSize(
                     animationSpec = spring(
                         dampingRatio = Spring.DampingRatioNoBouncy,
@@ -125,7 +130,6 @@ fun PostreCard(elemento: Elemento, modifier: Modifier = Modifier) {
                 contentScale = ContentScale.Crop
             )
 
-            // Si la tarjeta está expandida, mostramos la descripción
             if (expandido) {
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
