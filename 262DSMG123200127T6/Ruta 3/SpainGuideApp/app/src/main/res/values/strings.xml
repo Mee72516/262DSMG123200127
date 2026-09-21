@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Spain Guide</string>
+
+
+    <string name="category_cities">Ciudades Históricas</string>
+    <string name="category_beaches">Playas y Costas</string>
+    <string name="category_food">Rutas Gastronómicas</string>
+    <string name="category_activities">Actividades y Experiencias</string>
+
+
+    <!-- Ciudades Históricas -->
+    <string name="place_madrid">Madrid</string>
+    <string name="desc_madrid">La capital vibrante, famosa por el Museo del Prado, el Parque del Retiro, sus majestuosos bulevares y una vida nocturna inagotable.</string>
+
+    <string name="place_barcelona">Barcelona</string>
+    <string name="desc_barcelona">Ciudad cosmopolita bañada por el Mediterráneo, mundialmente conocida por la arquitectura modernista de Antoni Gaudí, como la Sagrada Familia.</string>
+
+    <string name="place_sevilla">Sevilla</string>
+    <string name="desc_sevilla">Corazón de Andalucía, hogar de la catedral gótica más grande del mundo, la Giralda y el barrio de Santa Cruz, cuna del flamenco.</string>
+
+    <string name="place_granada">Granada</string>
+    <string name="desc_granada">Ciudad marcada por la Alhambra, la fortaleza nazarí sobre la vega granadina, y el laberíntico barrio del Albaicín frente a Sierra Nevada.</string>
+
+    <string name="place_toledo">Toledo</string>
+    <string name="desc_toledo">La "Ciudad de las Tres Culturas", antigua capital imperial rodeada por el río Tajo, famosa por su casco histórico medieval y su artesanía en acero.</string>
+
+
+    <!-- Playas y Costas -->
+    <string name="place_ibiza">Ibiza</string>
+    <string name="desc_ibiza">Isla balear que combina una vibrante escena de clubes nocturnos de fama mundial con retiros de yoga y tranquilas calas de aguas cristalinas.</string>
+
+    <string name="place_mallorca">Mallorca</string>
+    <string name="desc_mallorca">La joya del Mediterráneo ofrece desde calas escondidas y montañas de piedra caliza hasta arquitectura histórica romana y árabe.</string>
+
+    <string name="place_costa_brava">Costa Brava</string>
+    <string name="desc_costa_brava">Litoral catalán de acantilados escarpados y calas escondidas de aguas turquesa, entre pueblos pesqueros como Cadaqués y Tossa de Mar.</string>
+
+    <string name="place_tenerife">Tenerife</string>
+    <string name="desc_tenerife">La mayor de las Islas Canarias, dominada por el volcán Teide, combina playas de arena negra volcánica con bosques de laurisilva.</string>
+
+
+    <!-- Rutas Gastronómicas -->
+    <string name="place_tapas">Ruta de Tapas en Andalucía</string>
+    <string name="desc_tapas">Una experiencia culinaria imprescindible, probando pequeñas porciones de jamón ibérico, patatas bravas, y pescadito frito de bar en bar.</string>
+
+    <string name="place_paella">Paella en Valencia</string>
+    <string name="desc_paella">El plato más internacional de España en su lugar de origen. Una auténtica paella valenciana se cocina a leña e incluye arroz, pollo, conejo y garrofón.</string>
+
+    <string name="place_pintxos">Pintxos en San Sebastián</string>
+    <string name="desc_pintxos">La capital donostiarra de los pintxos: pequeñas creaciones gastronómicas servidas sobre pan en la barra de sus bares del Casco Viejo.</string>
+
+    <string name="place_jamon">Ruta del Jamón Ibérico</string>
+    <string name="desc_jamon">Recorrido por las dehesas extremeñas donde se cría el cerdo ibérico, para descubrir el curado artesanal del jamón más apreciado de España.</string>
+
+
+    <!-- Actividades y Experiencias -->
+    <string name="place_flamenco">Noche de Flamenco en Sevilla</string>
+    <string name="desc_flamenco">Una noche en un tablao sevillano para sentir el cante, el toque de guitarra y el baile de este arte declarado Patrimonio de la Humanidad.</string>
+
+    <string name="place_camino">Camino de Santiago</string>
+    <string name="desc_camino">La histórica ruta de peregrinación que atraviesa el norte de España hasta la Catedral de Santiago de Compostela, entre paisajes y pueblos rurales.</string>
+
+    <string name="place_alhambra">Tour por la Alhambra</string>
+    <string name="desc_alhambra">Visita guiada por los Palacios Nazaríes, el Generalife y la Alcazaba: una inmersión en la arquitectura y los jardines de al-Ándalus.</string>
+
+    <string name="place_sanfermin">San Fermín en Pamplona</string>
+    <string name="desc_sanfermin">La fiesta más internacional de Navarra, célebre por el encierro de toros por las calles del casco viejo cada mes de julio.</string>
+</resources>
