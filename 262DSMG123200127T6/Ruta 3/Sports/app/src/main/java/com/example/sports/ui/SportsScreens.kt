@@ -88,6 +88,7 @@ fun SportsApp(
     val viewModel: SportsViewModel = viewModel()
     val uiState by viewModel.uiState.collectAsState()
 
+    val activity = LocalContext.current as Activity
 
     val contentType = when (windowSize) {
         WindowWidthSizeClass.Compact,
@@ -109,7 +110,7 @@ fun SportsApp(
                 sports = uiState.sportsList,
                 selectedSport = uiState.currentSport,
                 onClick = { viewModel.updateCurrentSport(it) },
-                onBackPressed = { viewModel.navigateToListPage() },
+                onBackPressed = { activity.finish() },
                 contentPadding = innerPadding,
                 modifier = modifier
             )
@@ -398,6 +399,9 @@ fun SportsListAndDetails(
     modifier: Modifier = Modifier,
     contentPadding: PaddingValues = PaddingValues(0.dp),
 ) {
+    BackHandler {
+        onBackPressed()
+    }
     Row(modifier = modifier) {
         SportsList(
             sports = sports,
