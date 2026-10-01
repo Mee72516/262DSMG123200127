@@ -50,9 +50,6 @@ fun HomeScreen(
     }
 }
 
-/**
- * The home screen displaying the loading message.
- */
 @Composable
 fun LoadingScreen(modifier: Modifier = Modifier) {
     Image(
@@ -62,9 +59,6 @@ fun LoadingScreen(modifier: Modifier = Modifier) {
     )
 }
 
-/**
- * The home screen displaying error message with re-attempt button.
- */
 @Composable
 fun ErrorScreen(modifier: Modifier = Modifier) {
     Column(
@@ -79,9 +73,6 @@ fun ErrorScreen(modifier: Modifier = Modifier) {
     }
 }
 
-/**
- * ResultScreen displaying number of photos retrieved.
- */
 @Composable
 fun ResultScreen(photos: String, modifier: Modifier = Modifier) {
     Box(
