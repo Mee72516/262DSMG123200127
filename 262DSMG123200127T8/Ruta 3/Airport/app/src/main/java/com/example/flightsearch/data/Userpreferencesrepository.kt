@@ -1,0 +1,28 @@
+package com.example.flightsearch.data
+
+import androidx.datastore.core.DataStore
+import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.edit
+import androidx.datastore.preferences.core.emptyPreferences
+import androidx.datastore.preferences.core.stringPreferencesKey
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.map
+import java.io.IOException
+
+class UserPreferencesRepository(private val dataStore: DataStore<Preferences>) {
+
+    private companion object {
+        val SEARCH_QUERY = stringPreferencesKey("search_query")
+    }
+
+    val searchQuery: Flow<String> = dataStore.data
+        .catch { e ->
+            if (e is IOException) emit(emptyPreferences()) else throw e
+        }
+        .map { prefs -> prefs[SEARCH_QUERY] ?: "" }
+
+    suspend fun saveSearchQuery(query: String) {
+        dataStore.edit { prefs -> prefs[SEARCH_QUERY] = query }
+    }
+}
